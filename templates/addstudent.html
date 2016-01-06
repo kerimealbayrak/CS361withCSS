@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>{{ form.as_table }}</td>
+
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

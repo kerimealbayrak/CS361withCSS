@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course.name }},{{ course.code }},{{ course.classroom }},{{ course.time }},{{ course.teacher.firstname }},{{ course.teacher.lastname }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
